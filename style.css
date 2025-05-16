@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+ }
+
+ :root {
+    font-size: 16px;
+    --plain-white: #fff;
+    --dark-grey: #121212;
+ }
+
+ @font-face {
+    font-family: Coolvetica Rg;
+    src: url(/assets/Coolvetica\ Rg.otf);
+ }
+
+body {
+    background: url(assets/background-image-50.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark-grey);
+    color: var(--plain-white);
+    font-family: Coolvetica Rg;
+    text-shadow: 0.313rem 0.313rem 0.5rem var(--dark-grey);
+}
+
+a {
+    color: var(--plain-white);
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-icon {
+    width: 20rem;
+}
+
+#description {
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: 0.625rem;
+}
+
+.btn-nav {
+    display: none;
+}
+
+nav {
+    font-size: 1.7rem;
+    display: block;
+    position: fixed;
+    right: 2rem;
+    top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul:hover li:not(:hover) {
+    opacity: 0.6;
+    transition: all 0.8s ease-out;
+}
+
+.checkbox:checked ~ .nav-links {
+    visibility: visible;
+}
+
+main {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main p {
+    font-size: large;
+    margin: 0.625rem 0rem;
+    line-height: 170%;
+    letter-spacing: 0.081rem;
+    word-spacing: 0.125rem;
+    text-align: justify;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+#arrow {
+    height: 0.7rem;
+    width: 0.7rem;
+    border: 0.163rem solid var(--plain-white);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(45deg);
+}
+
+button {
+    background-color: transparent;
+    color: var(--plain-white);
+    font-family: Coolvetica Rg;
+    font-weight: lighter;
+}
+
+footer {
+    height: 3.125rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0rem;
+    background-color: var(--dark-grey);
+}
+
+i {
+    padding: 0 0.625rem;
+}
+
+a:nth-child(2) {
+    margin-right: 4.375rem;
+}
+
+@media (max-width:960px) {
+    main {
+        max-width: 100%;
+    }
+
+    .logo-icon {
+        width: 20rem;
+        display: block;
+        position: fixed;
+        left: 1.5rem;
+        top: 1.5rem
+    }
+    
+    #description {
+        font-size: 1.180rem;
+        font-style: italic;
+    }
+
+    .nav .nav-links {
+        display: block;
+        position: absolute;
+        top: 4.6875rem;
+        left: 0;
+        background-color: var(--dark-grey);
+        text-align: center;
+        width: 100%; /* fucked with */
+        height: 0;
+        z-index: 1;
+        visibility: hidden;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+
+    .btn-nav {
+        background: none;
+        border: none;
+        font: inherit;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--plain-white);
+        padding: 1rem 0;
+        cursor: pointer;
+    }
+
+    .hamburguer {
+        border-top: 0.125rem solid var(--plain-white);
+        width: 1.25rem;
+    }
+
+    .hamburguer::before, 
+    .hamburguer::after {
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background: currentColor;
+        margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .nav.active .nav-links {
+        height: calc(100vh);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .nav.active .hamburguer {
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+    }
+    
+    .nav.active .hamburger::after {
+       transform: rotate(-135deg);
+        top: -0.4375rem;
+    }
+
+    main {
+        max-width: 90%;
+    }
+    
+    main p {
+        font-size: large;
+        line-height: 160%;
+        letter-spacing: 0.081rem;
+        word-spacing: 0.056rem;
+        text-align: justify;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        height: 6.25rem;
+        width: 100%;
+        bottom: 0rem;
+        background-color: var(--dark-grey);
+    }
+
+    footer #contact {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    a:nth-child(2) {
+        margin-right: 0rem;
+    }
+}

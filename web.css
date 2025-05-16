@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+ }
+
+ @font-face {
+    font-family: Coolvetica Rg;
+    src: url(/assets/Coolvetica\ Rg.otf);
+ }
+
+body {
+    background: url(assets/background-image-50.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #121212;
+    color: #fff;
+    font-family: Coolvetica Rg;
+    text-shadow: 5px 5px 8px #121212;
+}
+
+a {
+    color:#fff
+}
+
+.logo-icon {
+    width: 17em;
+    padding: 70px;
+}
+
+#description {
+    font-size: 1.7em;
+    font-style: italic;
+    padding: 0 70px;
+}
+
+#menu-hamb {
+    position: fixed;
+    top: 45px;
+    right: -100px;
+}
+
+nav {
+    font-size: 2.8em;
+    padding: 50px 70px;
+    order: -1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 0px 20px;
+}
+
+nav ul:hover li:not(:hover) {
+    opacity: 0.6;
+    transition: all 0.8s ease-out;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background-color: #121212;
+}
+
+i {
+    padding: 30px 30px;
+}
+
+@media (max-width:960px) {
+    body {
+        background: url(assets/background-image-50.png);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        height: 100vh;
+        background-color: #121212;
+        color: #fff;
+        font-family: Coolvetica Rg;
+        text-shadow: 5px 5px 8px #121212;
+    }
+
+    .logo-icon {
+        width: 16.6em;
+        padding: 70px;
+    }
+
+    #menu-hamb {
+        position: fixed;
+        top: 45px;
+        right: 50px;
+    }
+    
+    #description {
+        font-size: 1.7em;
+        font-style: italic;
+        padding: 0 70px;
+    }
+    
+    nav {
+        font-size: 3em;
+        padding-left: 70px;
+        order: 0;
+        display: block;
+        position: absolute;
+        right: -14px;
+        top: 100px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: self-end;
+    }
+
+    footer {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        background-color: #121212;
+    }
+
+    i {
+        padding: 20px 30px;
+    }
+}
