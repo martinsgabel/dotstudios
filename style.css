@@ -15,7 +15,7 @@
 
  @font-face {
     font-family: Coolvetica Rg;
-    src: url(/assets/Coolvetica\ Rg.otf);
+    src: url(/assets/Coolvetica\ Rg.otf) format('opentype');
  }
 
 body {
